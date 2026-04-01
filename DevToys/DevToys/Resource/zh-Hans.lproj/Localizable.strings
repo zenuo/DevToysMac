@@ -188,3 +188,14 @@
 "Converted Images" = "转换图片";
 "Scale" = "比例";
 "Size" = "大小";
+
+"tool.cron.title" = "Cron 表达式解析器";
+"tool.cron.mintitle" = "Cron 解析器";
+"tool.cron.description" = "解析和可视化 Cron 表达式，支持秒和分钟精度";
+"Precision Mode" = "精度模式";
+"Select seconds or minutes precision" = "选择秒或分钟精度";
+"Cron Expression" = "Cron 表达式";
+"Description" = "描述";
+"Next Execution Times" = "下次执行时间";
+"With Seconds (6 fields)" = "精确到秒 (6个字段)";
+"Without Seconds (5 fields)" = "精确到分 (5个字段)";

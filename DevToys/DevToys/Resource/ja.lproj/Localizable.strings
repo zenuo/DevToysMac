@@ -238,3 +238,14 @@
 "Input 1" = "元のテキスト";
 "Input 2" = "変更後のテキスト";
 "Diff Style" = "差分の取り方";
+
+"tool.cron.title" = "Cron Expression Parser";
+"tool.cron.mintitle" = "Cron Parser";
+"tool.cron.description" = "Parse and visualize cron expressions with seconds or minutes precision";
+"Precision Mode" = "Precision Mode";
+"Select seconds or minutes precision" = "Select seconds or minutes precision";
+"Cron Expression" = "Cron Expression";
+"Description" = "Description";
+"Next Execution Times" = "Next Execution Times";
+"With Seconds (6 fields)" = "With Seconds (6 fields)";
+"Without Seconds (5 fields)" = "Without Seconds (5 fields)";

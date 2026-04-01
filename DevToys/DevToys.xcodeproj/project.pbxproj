@@ -40,6 +40,7 @@
 		B63A035227C25B29009FD2AD /* FFTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63A035127C25B29009FD2AD /* FFTime.swift */; };
 		B64844FF27B767EC004FE02B /* ToolManager+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64844FE27B767EC004FE02B /* ToolManager+.swift */; };
 		B64AA45027AD0D3900EC436D /* DateConverterView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AA44F27AD0D3900EC436D /* DateConverterView+.swift */; };
+		2A2E963A1C30A72E62F77553 /* CronParserView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66041626125967E82147355 /* CronParserView+.swift */; };
 		B64B1E7427A4F5E200AC2601 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B1E7327A4F5E200AC2601 /* AppDelegate.swift */; };
 		B64B1E7627A4F5E200AC2601 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64B1E7527A4F5E200AC2601 /* AppViewController.swift */; };
 		B64B1E7827A4F5E300AC2601 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64B1E7727A4F5E300AC2601 /* Assets.xcassets */; };
@@ -254,6 +255,7 @@
 		B63A035127C25B29009FD2AD /* FFTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTime.swift; sourceTree = "<group>"; };
 		B64844FE27B767EC004FE02B /* ToolManager+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToolManager+.swift"; sourceTree = "<group>"; };
 		B64AA44F27AD0D3900EC436D /* DateConverterView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateConverterView+.swift"; sourceTree = "<group>"; };
+		E66041626125967E82147355 /* CronParserView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CronParserView+.swift"; sourceTree = "<group>"; };
 		B64B1E7027A4F5E200AC2601 /* DevToys.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevToys.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64B1E7327A4F5E200AC2601 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B64B1E7527A4F5E200AC2601 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
@@ -451,6 +453,7 @@
 				B608541127A66A90003BF243 /* JSONYamlConverterView+.swift */,
 				B608541D27A67B48003BF243 /* NumberBaseConverterView+.swift */,
 				B64AA44F27AD0D3900EC436D /* DateConverterView+.swift */,
+				E66041626125967E82147355 /* CronParserView+.swift */,
 			);
 			path = Convert;
 			sourceTree = "<group>";
@@ -1118,6 +1121,7 @@
 				B67A4CC927C10493009277FB /* SaturationBarView.swift in Sources */,
 				B64B202027A523A200AC2601 /* ToolMenuCell.swift in Sources */,
 				B64AA45027AD0D3900EC436D /* DateConverterView+.swift in Sources */,
+				2A2E963A1C30A72E62F77553 /* CronParserView+.swift in Sources */,
 				B6E294E527C337F300314132 /* FFThumnailGenerator.swift in Sources */,
 				B6C5292727C20DC60019BCB0 /* FFMpegExecutor.swift in Sources */,
 				B672CFA027AAB8DD00391A5D /* FileDrop.swift in Sources */,
