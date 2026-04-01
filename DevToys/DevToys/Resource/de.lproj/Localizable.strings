@@ -189,13 +189,13 @@
 "Scale" = "Skalierung";
 "Size" = "Größe";
 
-"tool.cron.title" = "Cron Expression Parser";
-"tool.cron.mintitle" = "Cron Parser";
-"tool.cron.description" = "Parse and visualize cron expressions with seconds or minutes precision";
-"Precision Mode" = "Precision Mode";
-"Select seconds or minutes precision" = "Select seconds or minutes precision";
-"Cron Expression" = "Cron Expression";
-"Description" = "Description";
-"Next Execution Times" = "Next Execution Times";
-"With Seconds (6 fields)" = "With Seconds (6 fields)";
-"Without Seconds (5 fields)" = "Without Seconds (5 fields)";
+"tool.cron.title" = "Cron-Ausdruck-Parser";
+"tool.cron.mintitle" = "Cron-Parser";
+"tool.cron.description" = "Cron-Ausdrücke mit Sekunden- oder Minutengenauigkeit analysieren und visualisieren";
+"Precision Mode" = "Genauigkeitsmodus";
+"Select seconds or minutes precision" = "Sekunden- oder Minutengenauigkeit wählen";
+"Cron Expression" = "Cron-Ausdruck";
+"Description" = "Beschreibung";
+"Next Execution Times" = "Nächste Ausführungszeiten";
+"With Seconds (6 fields)" = "Mit Sekunden (6 Felder)";
+"Without Seconds (5 fields)" = "Ohne Sekunden (5 Felder)";
