@@ -28,7 +28,15 @@ jobs:
             -workspace DevToys.xcworkspace \
             -scheme DevToys \
             -destination 'platform=macOS' \
+            -derivedDataPath build \
             CODE_SIGN_IDENTITY="-" \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGNING_ALLOWED=NO \
             | xcpretty && exit ${PIPESTATUS[0]}
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: DevToys
+          path: build/Build/Products/Debug/DevToys.app
+          retention-days: 7
