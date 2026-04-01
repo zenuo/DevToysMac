@@ -188,3 +188,14 @@
 "Converted Images" = "Imágenes convertidas";
 "Scale" = "Escala";
 "Size" = "Tamaño";
+
+"tool.cron.title" = "Analizador de expresiones Cron";
+"tool.cron.mintitle" = "Analizador Cron";
+"tool.cron.description" = "Analizar y visualizar expresiones cron con precisión de segundos o minutos";
+"Precision Mode" = "Modo de precisión";
+"Select seconds or minutes precision" = "Seleccionar precisión de segundos o minutos";
+"Cron Expression" = "Expresión Cron";
+"Description" = "Descripción";
+"Next Execution Times" = "Próximas ejecuciones";
+"With Seconds (6 fields)" = "Con segundos (6 campos)";
+"Without Seconds (5 fields)" = "Sin segundos (5 campos)";

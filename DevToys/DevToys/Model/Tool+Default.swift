@@ -40,6 +40,11 @@ extension Tool {
         sidebarTitle: "tool.date.mintitle".localized(), toolDescription: "tool.date.description".localized(),
         viewController: DateConverterViewController()
     )
+    static let cronParser = Tool(
+        title: "tool.cron.title".localized(), identifier: "cron.parser", category: .converter, icon: R.Image.Tool.dateConvert,
+        sidebarTitle: "tool.cron.mintitle".localized(), toolDescription: "tool.cron.description".localized(),
+        viewController: CronParserViewController()
+    )
     
     // MARK: - Encoder / Decoder -
     static let htmlCoder = Tool(
@@ -189,6 +194,7 @@ extension ToolManager {
         toolManager.registerTool(.jsonYamlConverter)
         toolManager.registerTool(.numberBaseConverter)
         toolManager.registerTool(.dateConverter)
+        toolManager.registerTool(.cronParser)
 
         toolManager.registerTool(.htmlCoder)
         toolManager.registerTool(.urlCoder)
