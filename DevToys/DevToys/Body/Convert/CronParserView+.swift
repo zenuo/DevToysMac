@@ -265,8 +265,9 @@ final class CronParserViewController: NSViewController {
             .store(in: &objectBag)
 
         self.cell.expressionField.changeStringPublisher
-            .sink{[unowned self] in
-                self.expression = $0
+            .handleEvents(receiveOutput: { [unowned self] in self.expression = $0 })
+            .debounce(for: .seconds(0.5), scheduler: DispatchQueue.main)
+            .sink{[unowned self] _ in
                 self.parse()
             }
             .store(in: &objectBag)
@@ -304,27 +305,43 @@ final class CronParserViewController: NSViewController {
             return
         }
 
-        // Description
-        switch CronParser.describeExpression(expression: expr, mode: precisionMode) {
-        case .success(let desc):
-            self.descriptionText = desc
-            self.isError = false
-        case .failure(let error):
-            self.descriptionText = error.localizedDescription
-            self.isError = true
-            self.nextTimesText = ""
-            return
-        }
+        let mode = precisionMode
 
-        // Next execution times
-        switch CronParser.nextExecutionTimes(expression: expr, mode: precisionMode, count: 10) {
-        case .success(let dates):
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss (EEEE)"
-            let lines = dates.enumerated().map { "\($0.offset + 1). \(formatter.string(from: $0.element))" }
-            self.nextTimesText = lines.joined(separator: "\n")
-        case .failure(let error):
-            self.nextTimesText = error.localizedDescription
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            // Description
+            let descResult = CronParser.describeExpression(expression: expr, mode: mode)
+
+            var timesResult: Result<[Date], CronError>?
+            if case .success = descResult {
+                timesResult = CronParser.nextExecutionTimes(expression: expr, mode: mode, count: 10)
+            }
+
+            DispatchQueue.main.async {
+                guard let self = self else { return }
+
+                switch descResult {
+                case .success(let desc):
+                    self.descriptionText = desc
+                    self.isError = false
+                case .failure(let error):
+                    self.descriptionText = error.localizedDescription
+                    self.isError = true
+                    self.nextTimesText = ""
+                    return
+                }
+
+                if let timesResult = timesResult {
+                    switch timesResult {
+                    case .success(let dates):
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss (EEEE)"
+                        let lines = dates.enumerated().map { "\($0.offset + 1). \(formatter.string(from: $0.element))" }
+                        self.nextTimesText = lines.joined(separator: "\n")
+                    case .failure(let error):
+                        self.nextTimesText = error.localizedDescription
+                    }
+                }
+            }
         }
     }
 }
